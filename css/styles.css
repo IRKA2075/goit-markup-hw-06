@@ -33,11 +33,263 @@ address {
   font-style: normal;
 }
 .container {
-  width: 320px;
-  padding: 16px;
-  margin: 0 auto;
+  /*width: 100%; /*на всю ширину: 320px - mob; 768px - tabl; 1158px - desktop*/
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px; /* 0 16px - tabl; 0 15px - desktop*/
+  /*height: 7216px; /*4400px - tablet; 3467px - desktop*/
+  /*margin: 0 auto;*/
 }
-/*============================================================*/
+
+/*====================================*/
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    /*margin: 0 auto; не нужно т.к. и так с верху вниз тянется*/
+  }
+}
+/*========================== Media   Media Tabl ==============================*/
+@media screen and (min-width: 768px) {
+  .container {
+    /*margin: 0 auto; не нужно т.к. и так с верху вниз тянется*/
+    max-width: 768px; /*width: 100%; /*на всю ширину: 320px - mob; 768px - tabl; 1158px - desktop*/
+    padding-left: 16px;
+    padding-right: 16px; /* 0 16px - tabl; 0 15px - desktop*/
+    /*height: 7216px; /*4400px - tablet; 3467px - desktop*/
+  }
+  .header {
+  }
+
+  .header-burger {
+    display: none;
+  }
+  .header-menu-list {
+    display: flex;
+    gap: 40px;
+  }
+  .header-menu-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    font-style: normal;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .current {
+    position: relative;
+    color: #404bbf;
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 48px;
+  }
+  .current {
+    position: relative;
+    color: #404bbf;
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 48px;
+  }
+  .header-contact {
+    font-style: normal;
+  }
+  .header-contact-list {
+    display: block;
+    gap: 12px;
+  }
+  .header-logo {
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(/images/foto.hero.tab.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/foto.hero.tab.2x.jpg);
+    }
+  }
+  .accomplishments {
+    padding-top: 96px; /* 96 tabl; 120 desktop*/
+    padding-bottom: 96px; /* 96 tabl; 120 desktop*/
+  }
+  .accomplishments-list {
+    gap: 72px 24px;
+  }
+  .accomplishments-item {
+    width: calc((100%-24px) / 2);
+  }
+
+  .our-team {
+  }
+
+  .our-portfolio {
+  }
+
+  .footer {
+  }
+}
+/*============================= end media Tabl==========================*/
+
+/*========================== Media   Media Desktop =========================*/
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px; /*width: 100%; /*на всю ширину: 320px - mob; 768px - tabl; 1158px - desktop*/
+    padding-left: 15px;
+    padding-right: 15px; /* 0 16px - tabl; 0 15px - desktop*/
+    /*height: 7216px; /*4400px - tablet; 3467px - desktop*/
+    margin: 0 auto;
+  }
+  .header {
+  }
+
+  .header-burger {
+    display: none;
+  }
+  .header-menu-list {
+    display: flex;
+    gap: 40px;
+  }
+  .header-menu-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    font-style: normal;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .current {
+    position: relative;
+    color: #404bbf;
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 48px;
+  }
+  .current {
+    position: relative;
+    color: #404bbf;
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 48px;
+  }
+  .header-contact {
+    font-style: normal;
+  }
+  .header-contact-list {
+    display: flex;
+    gap: 40px;
+  }
+  .header-contact-item {
+  }
+  .header-contact-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
+  .header-contact-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header-contact-link:hover,
+  .header-contact-link:focus {
+    color: #404bbf;
+  }
+  .header-logo {
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/foto.hero.desktop.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/foto.hero.desktop.2x.jpg);
+    }
+  }
+  .accomplishments {
+    padding-top: 120px; /* 96 tabl; 96 mob*/
+    padding-bottom: 120px; /* 96 tabl; 96 mob*/
+  }
+  .accomplishments-list {
+    gap: 24px;
+    padding-left: 156px;
+    padding-right: 156px;
+  }
+  .accomplishments-item {
+    width: calc((100%-24px) / 2);
+  }
+  .accomplishments-icon-wrap {
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid;
+    color: #8e8f99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    margin-bottom: 8px;
+  }
+  .accomplishments-icon {
+    display: block;
+  }
+
+  .our-team {
+    padding: 120px 0;
+  }
+
+  .our-portfolio {
+  }
+
+  .footer {
+  }
+}
+/*============================= end media Desktop==========================*/
+
 .header-container {
   display: flex;
   align-items: center;
@@ -59,49 +311,22 @@ address {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  margin-right: 149px;
   text-transform: uppercase;
   display: inline-block;
+  /*margin-right: 149px; /*76px desktop*/
 }
 .header-pathlogo {
   color: #2e2f42;
 }
-/*.header-menu-list {
-  display: flex;
-  gap: 40px;
-}*/
-/*.header-menu-link {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  font-style: normal;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  display: block;
-  position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}*/
-/*.current {
-  position: relative;
-  color: #404bbf;
-}*/
-/*.current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-  width: 48px;
-}*/
-/*.header-menu-link:hover,
+.header-menu-list {
+  display: none;
+}
+
+.header-menu-link:hover,
 .header-menu-link:focus {
   color: #404bbf;
-}*/
-/*.header-menu-link::after {
+}
+.header-menu-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -110,33 +335,32 @@ address {
   background-color: #404bbf;
   border-radius: 2px;
   width: 48px;
-}*/
-/*.header-contact {
-  font-style: normal;
-}*/
-/*.header-contact-list {
-  display: flex;
+}
+
+.header-contact-list {
+  display: none; /*display: flex; для desktop*/
   gap: 40px;
-}*/
-/*.header-contact-item {
-}*/
-/*.header-contact-item:hover {
+}
+.header-contact-item {
+}
+.header-contact-item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
-}*/
+}
 
-/*.header-contact-link {
+.header-contact-link {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}*/
-/*.header-contact-link:hover,
+}
+.header-contact-link:hover,
 .header-contact-link:focus {
   color: #404bbf;
-}*/
+}
+
 /*=================================================================*/
 .footer {
   background-color: #2e2f42;
@@ -507,27 +731,32 @@ address {
 }
 /*==================================================================*/
 .hero {
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/herobg.jpg);
-  max-width: 320px;
+  max-width: 320px; /* 1144px для desktop*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: auto;
-  padding: 72px 0;
+  padding: 72px 0; /*188px 0 для desktop*/
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/foto.hero.mob.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/foto.hero.mob.2x.jpg);
+  }
 }
 .hero-container {
-  /*background-color: #2e2f42;*/
   background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-title {
-  font-size: 36px;
+  font-size: 56px; /*36px для моб*/
   font-weight: 700;
-  line-height: 1.11;
+  line-height: 1.07; /*1.11 для моб*/
   letter-spacing: 0.02em;
   color: #fff;
   text-align: center;
-  max-width: 288px;
+  max-width: 496px; /*288px для моб*/
   margin: 0 auto;
 }
 .hero-btn {
@@ -544,9 +773,8 @@ address {
   height: 56px;
   border: none;
   align-items: flex-start;
-  /*gap: 10px;    ?????????*/
   border-radius: 4px;
-  margin: 72px auto auto auto;
+  margin: 48px auto auto auto; /*72px auto auto auto; для моб*/
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
@@ -554,47 +782,10 @@ address {
   background-color: #404bbf;
 }
 /*==================================*/
+
 .accomplishments {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-.accomplishments-list {
-  /*display: flex;*/
-  /*gap: 24px;*/
-}
-.accomplishments-item {
-  /*width: 288px;*/
-  align-self: stretch;
-  margin-bottom: 72px;
-}
-.accomplishments-icon-wrap {
-  display: none;
-  /*background-color: #f4f4fd;
-  border-radius: 4px;
-  border: 1px solid;
-  color: #8e8f99;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 112px;
-  margin-bottom: 8px;*/
-}
-.accomplishments-subtitle {
-  font-family: "Roboto", sans-serif;
-  color: #2e2f42;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
-  text-align: center;
-}
-.accomplishments-item-text {
-  font-family: "Roboto", sans-serif;
-  color: #434455;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  padding-top: 96px; /* 96 tabl; 120 desktop*/
+  padding-bottom: 96px; /* 96 tabl; 120 desktop*/
 }
 .visually-hidden {
   position: absolute;
@@ -608,10 +799,43 @@ address {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.accomplishments-list {
+  display: flex;
+  flex-direction: column; /*для мобилки в колонки сделать; або можно ещё: flex-wrap: wrap;=> та же функция */
+  gap: 72px; /*72px-tabl vertikalno; 24px-desktop gorizontalno*/
+}
+.accomplishments-item {
+  width: 288px; /*356px-tabl; 264px-desktop;*/
+  align-self: stretch; /*для моб.; табл.*, а для десктопа-этого нет*/
+  margin-bottom: 72px; /*72px-tabl; display:none-desktop*/
+}
+.accomplishments-icon-wrap {
+}
+.accomplishments-icon {
+  display: none;
+}
+.accomplishments-subtitle {
+  font-family: "Roboto", sans-serif;
+  color: #2e2f42;
+  font-weight: 700; /* 700-tabl; 500-desktop */
+  font-size: 36px; /*  36-tabl; 20-desktop*/
+  line-height: 1.11; /* 1.11 - tabl; 1.2-desktop*/
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  text-align: center; /* для моб. только!!!*/
+}
+.accomplishments-item-text {
+  font-family: "Roboto", sans-serif;
+  color: #434455;
+  font-weight: 500; /*500-tabl; 400-desktop*/
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
 /*===========================*/
 .our-team {
   background-color: #f4f4fd;
-  padding: 96px 12px;
+  padding: 96px 0; /*120px 0; - desktop*/
 }
 .our-team-title {
   font-size: 36px;

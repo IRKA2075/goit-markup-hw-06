@@ -24,36 +24,40 @@
         <div class="container header-container">
             <nav class="header-navigation">
                 <a href="./index.html" class="header-logo">Web<span class="header-pathlogo">Studio</span></a>
-                <!-- <ul class="header-menu-list">
-                <li class="header-menu-item">
-                    <a href="./index.html" class="header-menu-link current">Studio</a>
-                </li>
-                <li class="header-menu-item">
-                    <a href="" class="header-menu-link"> Portfolio</a>
-                </li>
-                <li class="header-menu-item">
-                    <a href="" class="header-menu-link">Contacts</a>
-                </li>
-                </ul>-->
+                <!--прибрали список через css list=> display:none-->
+                <ul class="header-menu-list">
+                    <li class="header-menu-item">
+                        <a href="./index.html" class="header-menu-link current">Studio</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="" class="header-menu-link"> Portfolio</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="" class="header-menu-link">Contacts</a>
+                    </li>
+                </ul>
             </nav>
-            <!-- <address class="header-contact">
-            <ul class="header-contact-list">
-                <li class="header-contact-item">
-                    <a class="header-contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                </li>
-                <li class="header-contact-item">
-                    <a class="header-contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
-                </li>
-            </ul>
-            </address>-->
-            <div>
-                <nav class="header-burger">
+
+            <address class="header-contact">
+                <!--прибрали adresse через css contact=> display:none-->
+                <ul class="header-contact-list">
+                    <li class="header-contact-item">
+                        <a class="header-contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="header-contact-item">
+                        <a class="header-contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                    </li>
+                </ul>
+            </address>
+            <!--=====================================================-->
+            <button type="button" class="header-burger"> <!--додали в моб мен-->
+                <a href="/" class="header-burger-link">
                     <svg class="header-icon-burger" width="24" height="24">
                         <use href="./images/icons.svg#icon-headermenu"></use>
                     </svg>
-
-                </nav>
-            </div>
+                </a>
+            </button>
+            <!--=====================================================-->
         </div>
     </header>
 
@@ -63,7 +67,6 @@
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
                 <button type="button" class="hero-btn">Order Service</button>
             </div>
-
         </section>
 
         <section class="accomplishments">
@@ -73,11 +76,11 @@
 
                 <ul class="accomplishments-list">
                     <li class="accomplishments-item">
-                        <!-- <div class="accomplishments-icon-wrap">
-                        <svg class="accomplishments-icon" width="64" height="64">
-                            <use href="./images/icons.svg#icon-antenna-1"></use>
-                        </svg>
-                     </div>-->
+                        <div class="accomplishments-icon-wrap">
+                            <svg class="accomplishments-icon" width="64" height="64">
+                                <use href="./images/icons.svg#icon-antenna-1"></use>
+                            </svg>
+                        </div>
                         <h3 class="accomplishments-subtitle">Strategy</h3>
                         <p class="accomplishments-item-text">Our goal is to identify the business
                             problem to walk away
@@ -87,11 +90,11 @@
                         </p>
                     </li>
                     <li class="accomplishments-item">
-                        <!-- <div class="accomplishments-icon-wrap"> 
-                        <svg class="accomplishments-icon" width="64" height="64">
-                            <use href="./images/icons.svg#icon-clock-1"></use>
-                        </svg>
-            </div>-->
+                        <div class="accomplishments-icon-wrap">
+                            <svg class="accomplishments-icon" width="64" height="64">
+                                <use href="./images/icons.svg#icon-clock-1"></use>
+                            </svg>
+                        </div>
                         <h3 class="accomplishments-subtitle">Punctuality</h3>
                         <p class="accomplishments-item-text">Bring the key message to the brand's
                             audience for the best
@@ -100,11 +103,11 @@
                             time.</p>
                     </li>
                     <li class="accomplishments-item">
-                        <!-- <div class="accomplishments-icon-wrap"> 
-                        <svg class="accomplishments-icon" width="64" height="64">
-                            <use href="./images/icons.svg#icon-diagram-1"></use>
-                        </svg>
-            </div>-->
+                        <div class="accomplishments-icon-wrap">
+                            <svg class="accomplishments-icon" width="64" height="64">
+                                <use href="./images/icons.svg#icon-diagram-1"></use>
+                            </svg>
+                        </div>
                         <h3 class="accomplishments-subtitle">Diligence</h3>
                         <p class="accomplishments-item-text">Research and confirm brands that
                             present the strongest
@@ -114,11 +117,11 @@
                             risk.</p>
                     </li>
                     <li class="accomplishments-item">
-                        <!-- <div class="accomplishments-icon-wrap"> 
-                        <svg class="accomplishments-icon" width="64" height="64">
-                            <use href="./images/icons.svg#icon-astronaut-1"></use>
-                        </svg>
-            </div>-->
+                        <div class="accomplishments-icon-wrap">
+                            <svg class="accomplishments-icon" width="64" height="64">
+                                <use href="./images/icons.svg#icon-astronaut-1"></use>
+                            </svg>
+                        </div>
                         <h3 class="accomplishments-subtitle">Technologies</h3>
                         <p class="accomplishments-item-text">Design practice focused on digital
                             experiences. We bring
@@ -316,7 +319,8 @@
                     <li class="our-portfolio-item">
 
                         <div class="our-portfolio-cover-wrap">
-                            <img src="./images/fiolet.jpg" alt="fiolet" width="288">
+                            <img src="./images/fiolet.jpg" alt="fiolet" width="360">
+
                             <!--<p class="our-portfolio-cover-text">14 Stylish and User-Friendly App
                             Design Concepts ·
                             Task
@@ -332,7 +336,7 @@
                     <li class="our-portfolio-item">
 
                         <div class="our-portfolio-cover-wrap">
-                            <img src="./images/telefon.jpg" alt="telefon" width="288">
+                            <img src="./images/telefon.jpg" alt="telefon" width="360">
                             <!--<p class="our-portfolio-cover-text">14 Stylish and User-Friendly App
                             Design Concepts ·
                             Task
@@ -348,7 +352,7 @@
                     <li class="our-portfolio-item">
 
                         <div class="our-portfolio-cover-wrap">
-                            <img src="./images/comp.jpg" alt="computer" width="288">
+                            <img src="./images/comp.jpg" alt="computer" width="360">
                             <!--<p class="our-portfolio-cover-text">14 Stylish and User-Friendly App 
                             Design Concepts ·
                             Task
@@ -363,7 +367,7 @@
                     <li class="our-portfolio-item">
 
                         <div class="our-portfolio-cover-wrap">
-                            <img src="./images/drive.jpg" alt="drive" width="288">
+                            <img src="./images/drive.jpg" alt="drive" width="360">
                             <!--<p class="our-portfolio-cover-text">14 Stylish and User-Friendly App 
                             Design Concepts ·
                             Task
@@ -380,7 +384,7 @@
                     <li class="our-portfolio-item">
 
                         <div class="our-portfolio-cover-wrap">
-                            <img src="./images/moon.jpg" alt="moon" width="288">
+                            <img src="./images/moon.jpg" alt="moon" width="360">
                             <!--<p class="our-portfolio-cover-text">14 Stylish and User-Friendly App 
                             Design Concepts ·
                             Task
@@ -396,7 +400,7 @@
                     <li class="our-portfolio-item">
 
                         <div class="our-portfolio-cover-wrap">
-                            <img src="./images/gerl.jpg" alt="gerl" width="288">
+                            <img src="./images/gerl.jpg" alt="gerl" width="360">
                             <!--<p class="our-portfolio-cover-text">14 Stylish and User-Friendly App 
                             Design Concepts ·
                             Task
@@ -547,3 +551,22 @@
 </body>
 
 </html>
+
+
+
+
+
+
+<!--===========картинки=================
+                <div class="made-wrap">
+                    <picture class="foto.hero.">
+                        <source srcset="./images/ foto.hero.desktop.jpg 1x, foto.hero.desktop.2x.jpg 2x"
+                            media="(min-width: 1166px)">
+                        <source srcset="./images/foto.hero.tab.jpg 1x, foto.hero.tab.2x.jpg 2x"
+                            media="(min-width: 768px)">
+                        <source srcset="./images/foto.hero.mob.jpg 1x, foto.hero.mob.2x.jpg 2x"
+                            media="(min-width: 320px)">
+                    </picture>
+                    <img src="./images/foto.hero.tab.jpg" alt="people in office" width="768" height="436">
+                </div>
+                =================картинки end===============-->
